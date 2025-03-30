@@ -1,0 +1,439 @@
+.hero {
+	position: relative;
+}
+.find-your-paradise {
+	background-color: white;
+	border-top: 10px solid $dark;
+	color: $dark;
+	position: relative;
+	z-index: 2;
+	top: -4em;
+	align-items: top;
+	gap: 2em;
+	margin: 0 auto;
+	max-width: $xl;
+	& > * {
+		flex: 1;
+	}
+	@include bp-m {
+		display: flex;
+	}
+	&-content {
+		padding: 2em;
+		@include bp-m {
+			padding: 4em 4em 0;
+		}
+	}
+	h1 {
+		letter-spacing: 3px;
+		font-family: "Ratio Modern", serif;
+		font-weight: normal;
+		font-size: 3em;
+		margin-top: 0;
+		margin-bottom: 0.4em;
+		padding-bottom: 0.3em;
+		border-bottom: 1px solid $dark;
+	}
+	h3 {
+		letter-spacing: 6px;
+		font-size: 1em;
+		text-transform: uppercase;
+		margin-top: 0;
+	}
+	p {
+		font-size: 0.9em;
+		line-height: 1.6em;
+		color: $darkBlue;
+	}
+	.btn {
+		background-image: linear-gradient(to right, black, black);
+		background-size: 100% 1px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		text-align: center;
+		margin-top: 2em;
+
+		a {
+			background: $dark;
+			color: white;
+			border: none;
+			padding: 1em 2em;
+			text-transform: uppercase;
+			text-decoration: none;
+			font-weight: 600;
+			letter-spacing: 1px;
+			border-right: 10px solid white;
+			border-left: 10px solid white;
+			display: block;
+			margin: 0 auto;
+			max-width: 50%;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+			&:hover {
+				background: lighten($dark, 20%);
+			}
+		}
+	}
+	.girl {
+		flex: 1;
+		background: url("assets/images/behind-girl.jpg") center 4em no-repeat;
+		background-size: cover;
+		margin-top: 2em;
+		@include bp-m {
+			margin-top: -4em;
+		}
+		img {
+			width: 100%;
+			display: block;
+			margin: 0;
+		}
+	}
+}
+.trip-advisor {
+	margin: 1em 0;
+	@include bp-m {
+		margin: 4em 0 0;
+	}
+	h2 {
+		text-align: center;
+		font-size: 1.2em;
+		margin-bottom: 0.5em;
+		margin-top: 0;
+		letter-spacing: 5px;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $dark;
+		span {
+			color: #edad23;
+		}
+	}
+
+	.logos {
+		max-width: 800px;
+		margin: 2em auto 0;
+		display: flex;
+		gap: 2em;
+		padding: 0 2em;
+		& > * {
+			flex: 1;
+		}
+	}
+	img {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+	}
+}
+.suites {
+	margin-top: 4em;
+}
+.suites-nav {
+	margin: 2em 0;
+	border-bottom: 1px solid $dark;
+	display: none;
+	@include bp-m {
+		display: block;
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		gap: 1em;
+		li {
+			button {
+				background: none;
+				border: none;
+				padding: 1em 0.5em;
+				font-size: 0.9em;
+				font-weight: 600;
+				letter-spacing: 1px;
+				color: $dark;
+				position: relative;
+				cursor: pointer;
+				width: 100%;
+				box-sizing: border-box;
+				transition: all 0.2s ease-in-out;
+				&:after {
+					height: 5px;
+					background: $dark;
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					width: 0;
+					transition: all 0.3s ease-in-out;
+					content: "";
+				}
+				&:hover {
+					color: lighten($dark, 20%);
+					&:after {
+						width: 100%;
+					}
+				}
+			}
+			.selected {
+				&:after {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+.suites-content {
+	align-items: top;
+	gap: 2em;
+	& > * {
+		flex: 1;
+	}
+	@include bp-m {
+		display: flex;
+	}
+	.suites-meta {
+		@include bp-m {
+			max-width: 30%;
+		}
+		.suites-title {
+			display: flex;
+			margin-bottom: 1em;
+			margin-top: 2em;
+			align-items: center;
+			@include bp-m {
+				margin-bottom: 0;
+				margin-top: 0;
+			}
+
+			h3 {
+				text-align: center;
+				margin: 0;
+				@include bp-m {
+					margin: 1em 0;
+					text-align: left;
+				}
+			}
+			& > * {
+				flex: 1;
+			}
+			.suites-skip {
+				max-width: 50px;
+				display: block;
+				border-radius: 50px;
+				width: 50px;
+				height: 50px;
+				padding: 0;
+				margin: 0;
+				border: 0;
+				cursor: pointer;
+				background: $lightGrey;
+				border: 2px solid $darkBlue;
+				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+				transition: all 0.3s ease-in-out;
+				&:hover {
+					background: darken($lightGrey, 10%);
+				}
+				@include bp-m {
+					display: none;
+				}
+			}
+		}
+		.suites-pagination {
+			margin-bottom: 2em;
+			@include bp-m {
+				display: none;
+			}
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 1em;
+				li {
+					width: 20px;
+					height: 2px;
+					background: darken($lightGrey, 10%);
+					transition: all 0.3s ease-in-out;
+				}
+				.selected {
+					background: $darkBlue;
+					height: 4px;
+				}
+			}
+		}
+	}
+	.gallery {
+		overflow: hidden;
+		border-radius: 10px;
+		img {
+			display: block;
+			margin: 0;
+			width: 100%;
+		}
+	}
+	.pricing {
+		a {
+			color: #1c8989;
+			&:hover {
+				color: darken(#1c8989, 20%);
+			}
+		}
+	}
+	.features {
+		margin: 2em 0;
+		overflow: hidden;
+		.icons {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1em;
+			li {
+				text-align: center;
+				width: calc(25% - 1em);
+				box-sizing: border-box;
+				.icon {
+					padding-bottom: 0.5em;
+					margin-bottom: 0.5em;
+					border-bottom: 1px solid $dark;
+					font-size: 1.7em;
+				}
+				span {
+					font-size: 0.8em;
+				}
+			}
+		}
+	}
+	.description {
+		font-size: 0.9em;
+		line-height: 1.6em;
+		color: $darkBlue;
+		margin-top: 2em;
+		p {
+			margin: 0;
+		}
+		ul {
+			padding-left: 1em;
+		}
+	}
+}
+.feed-your-senses {
+	padding-top: 0;
+	&-images {
+		gap: 2em;
+		margin-bottom: 2em;
+		@include bp-m {
+			display: flex;
+		}
+		& > * {
+			flex: 1;
+			overflow: hidden;
+			margin-top: 1em;
+			@include bp-m {
+				margin-top: 0;
+			}
+		}
+		div {
+			&:first-child {
+				border-top-left-radius: 20px;
+			}
+			&:last-child {
+				border-top-right-radius: 20px;
+			}
+		}
+		img {
+			display: block;
+			margin: 0;
+			width: 100%;
+		}
+	}
+	.restaurant-logo {
+		justify-content: center;
+		align-content: center;
+		flex: 1;
+		overflow: hidden;
+		padding: 2em;
+		box-sizing: border-box;
+		@include bp-m {
+			background: $lightGrey;
+			border-bottom-left-radius: 40px;
+			max-width: calc(33% - 1em);
+		}
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+.adventure {
+	.content {
+		order: 1;
+	}
+
+	.slideshow {
+		order: 2;
+		position: relative;
+		.gallery {
+			border-radius: 10px;
+		}
+		img {
+			display: block;
+			margin: 0;
+			width: 100%;
+		}
+		.parrot {
+			position: absolute;
+			bottom: -100px;
+			left: -200px;
+			max-width: 100px;
+			@include bp-m {
+				max-width: 300px;
+			}
+		}
+	}
+}
+.events {
+	display: flex;
+	margin: 6em 0 4em;
+	& > * {
+		flex: 1;
+	}
+	&-content {
+		padding: 0 2em;
+		max-width: $xl;
+		position: relative;
+		@include bp-m {
+			padding: 0 4em;
+		}
+
+		.image {
+			border-radius: 20px;
+			overflow: hidden;
+			margin-bottom: 2em;
+			img {
+				display: block;
+				margin: 0;
+				width: 100%;
+			}
+		}
+	}
+	&-left {
+		background: $lightGrey;
+		border-bottom-right-radius: 20px;
+		border-top-right-radius: 20px;
+		max-width: 2em;
+		@include bp-m {
+			max-width: 20%;
+		}
+	}
+	&-right {
+		background: $lightGrey;
+		border-bottom-left-radius: 20px;
+		border-top-left-radius: 20px;
+		max-width: 2em;
+		@include bp-m {
+			max-width: 20%;
+		}
+	}
+}

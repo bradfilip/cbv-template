@@ -1,0 +1,38 @@
+$dark: #151515;
+$darkBlue: #252629;
+$lightGrey: #eeeeee;
+
+$sm: 480px;
+$md: 768px;
+$lg: 976px;
+$xl: 1200px;
+$xxl: 1400px;
+
+@mixin bp-xxl {
+	@media screen and (min-width: $xxl) {
+		@content;
+	}
+}
+
+@mixin bp-xl {
+	@media screen and (min-width: $xl) {
+		@content;
+	}
+}
+
+@mixin bp-l {
+	@media screen and (min-width: $lg) {
+		@content;
+	}
+}
+@mixin bp-m {
+	@media screen and (min-width: $md) {
+		@content;
+	}
+}
+
+@mixin bp-s {
+	@media screen and (min-width: $sm) {
+		@content;
+	}
+}

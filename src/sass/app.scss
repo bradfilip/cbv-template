@@ -1,0 +1,15 @@
+@import "https://use.typekit.net/ujh5exd.css";
+@import "https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700;800;";
+@import "../node_modules/normalize.css/normalize.css";
+@import "config/font-awesome.scss";
+@import "config/_variables.scss";
+@import "config/_layout.scss";
+@import "components/_blocks.scss";
+@import "components/_footer.scss";
+@import "components/_header.scss";
+@import "pages/_home.scss";
+body {
+	background-color: white;
+	font-family: "Wix Madefor Display", sans-serif;
+	font-size: 16px;
+}

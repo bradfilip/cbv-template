@@ -1,0 +1,219 @@
+.announcement {
+	background: $dark;
+	padding: 1em;
+	text-align: center;
+	color: white;
+	font-size: 0.9em;
+	p {
+		margin: 0;
+	}
+	a {
+		color: white;
+		&:hover {
+			color: #ccc;
+		}
+	}
+}
+.header {
+	background: $darkBlue;
+	color: white;
+	font-size: 0.9em;
+	top: 0;
+	position: sticky;
+	z-index: 1000;
+
+	.container {
+		display: flex;
+		gap: 1em;
+		align-items: center;
+		padding: 1.5em 1em;
+	}
+
+	.logo {
+		margin: 0 auto;
+		max-width: 250px;
+		@include bp-m {
+			margin: 0;
+			max-width: 200px;
+		}
+		img {
+			width: 100%;
+			display: block;
+			margin: 0;
+		}
+	}
+	.burger {
+		display: block;
+		max-width: 50px;
+		font-size: 1.5em;
+		cursor: pointer;
+		background: none;
+		color: white;
+		border: none;
+		flex: 1;
+		@include bp-m {
+			display: none;
+		}
+	}
+	.spacer {
+		display: block;
+		max-width: 50px;
+		flex: 1;
+		@include bp-m {
+			display: none;
+		}
+	}
+	.contact {
+		margin-left: auto;
+		align-items: center;
+		display: flex;
+		gap: 2em;
+	}
+	.contact-btn {
+		color: white;
+		transition: all 0.3s ease-in-out;
+		i {
+			font-size: 1.5em;
+		}
+		&:hover {
+			color: rgba(255, 255, 255, 0.8);
+		}
+	}
+	.reserve-btn {
+		text-decoration: none;
+		color: white;
+		text-transform: uppercase;
+		font-weight: 600;
+		border: 1px solid white;
+		padding: 1em;
+		display: inline-block;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			background: white;
+			color: $darkBlue;
+		}
+		display: none;
+		@include bp-m {
+			display: block;
+		}
+	}
+
+	.desktop-nav {
+		display: none;
+		margin-left: auto;
+		background: $darkBlue;
+		align-items: center;
+		gap: 2em;
+		@include bp-m {
+			display: flex;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			justify-content: center;
+			gap: 1em;
+			display: flex;
+
+			a {
+				position: relative;
+				text-decoration: none;
+				color: white;
+				text-transform: uppercase;
+				padding: 1em 0;
+				&:after {
+					height: 3px;
+					background: white;
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					width: 0;
+					transition: all 0.3s ease-in-out;
+					content: "";
+				}
+				&:hover {
+					&:after {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+.mobile-menu {
+	width: calc(100vw - 100px);
+	left: -100vw;
+	overflow: hidden;
+	background: $darkBlue;
+	position: absolute;
+	z-index: 1001;
+	transition: all 0.5s ease-in-out;
+	@include bp-m {
+		display: none;
+	}
+	&-wrapper {
+		min-width: 100%;
+	}
+	.mobile-nav {
+		border-top: 1px solid $dark;
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		a {
+			text-decoration: none;
+			color: white;
+			text-transform: uppercase;
+			border-radius: 5px;
+			background: $dark;
+			padding: 1.2em;
+			margin: 0.5em 1em;
+			font-size: 0.9em;
+			display: block;
+			border-bottom: 2px solid $dark;
+		}
+	}
+	.reserve,
+	.mobile-contact {
+		padding: 0.5em 1em;
+		a {
+			text-decoration: none;
+			color: white;
+			text-transform: uppercase;
+			font-weight: 600;
+			border: 1px solid white;
+			border-radius: 5px;
+			padding: 0.7em 1em;
+			display: block;
+			text-align: center;
+		}
+	}
+	.mobile-contact {
+		padding: 1em;
+		i {
+			margin-right: 1em;
+		}
+	}
+}
+.open-menu {
+	left: 0;
+}
+.header-lightbox {
+	background: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 900;
+	display: none;
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+.display-lightbox {
+	display: block;
+}
+.open-lightbox {
+	opacity: 1;
+}

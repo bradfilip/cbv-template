@@ -1,0 +1,29 @@
+.container {
+	max-width: $xl;
+	margin: 0 auto;
+	padding: 0 2em;
+}
+.flex {
+	@include bp-m {
+		display: flex;
+	}
+	gap: 2em;
+	& > * {
+		flex: 1;
+	}
+
+	.third {
+		@include bp-m {
+			max-width: 33.33%;
+		}
+	}
+}
+.section-pad {
+	padding: 2em 0;
+	@include bp-m {
+		padding: 4em 0 4em;
+	}
+}
+.centered {
+	text-align: center;
+}

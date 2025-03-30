@@ -1,0 +1,41 @@
+h3 {
+	font-size: 1em;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+.section-title,
+.content h2 {
+	font-family: "Ratio Modern", serif;
+	font-weight: normal;
+	font-size: 2em;
+	letter-spacing: 1px;
+	margin-top: 0;
+	@include bp-m {
+		font-size: 3em;
+		letter-spacing: 3px;
+	}
+}
+.content {
+	p {
+		color: $dark;
+		font-size: 0.9em;
+		line-height: 1.8em;
+	}
+}
+.block-link {
+	border: 2px solid black;
+	padding: 1em 2em;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 0.8em;
+	letter-spacing: 2px;
+	color: black;
+	margin-top: 1.5em;
+	transition: all 0.3s ease-in-out;
+	display: inline-block;
+	&:hover {
+		background: black;
+		color: white;
+	}
+}
