@@ -4,9 +4,6 @@
 		<meta charset="utf-8" />
 		<title>Caille Blanc Villa + Hotel</title>
 		<link rel="stylesheet" href="style.css" />
-		<script src="app.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-		<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet"/>
 	</head>
 	<body>
 		<div class="header" id="header">
@@ -35,7 +32,9 @@
 						<li><a href="faqs.html">Faq's</a></li>
 					</ul>
 					<div class="contact">
-						<a href="reserve.html" class="reserve-btn">Reserve Now</a>
+						<a href="reserve.html" class="reserve-btn"
+							>Reserve Now</a
+						>
 						<a href="contact.html" class="contact-btn">
 							<i class="fa-regular fa-phone-circle"></i>
 						</a>
@@ -47,8 +46,8 @@
 			<div class="mobile-menu-wrapper">
 				<nav class="mobile-nav">
 					<ul>
-						<li><a href="stays.html">Suites</a></li>
-						<li><a href="experiences.html">Gallery</a></li>
+						<li><a href="stays.html">Stays</a></li>
+						<li><a href="experiences.html">Experiences</a></li>
 						<li><a href="restaurant.html">Restaurant</a></li>
 						<li><a href="offers.html">Offers</a></li>
 						<li><a href="faq.html">Faq's</a></li>
@@ -64,18 +63,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="header-lightbox" onclick="toggleNav()" id="header-lightbox"></div>
-		<div class="hero">
-			<video
-				id="wp-custom-header-video"
-				autoplay=""
-				loop=""
-				playsinline=""
-				src="videos/home-hero.mp4"
-				style="height: auto; width: 100vw"
-				placeholder="images/hero.png"
-			></video>
-		</div>
+		<div
+			class="header-lightbox"
+			onclick="toggleNav()"
+			id="header-lightbox"
+		></div>
+		<div class="hero"></div>
 		<section class="find-your-paradise">
 			<div class="find-your-paradise-content content">
 				<h1>Find Your Paradise</h1>
@@ -398,5 +391,11 @@
 				</div>
 			</div>
 		</footer>
+		<script src="app.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+		<link
+			href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+			rel="stylesheet"
+		/>
 	</body>
 </html>

@@ -1,5 +1,11 @@
 .hero {
 	position: relative;
+	background: url("images/hero.png") center center no-repeat;
+	background-size: cover;
+	height: 50vh;
+	@include bp-m {
+		height: 80vh;
+	}
 }
 .find-your-paradise {
 	background-color: white;
