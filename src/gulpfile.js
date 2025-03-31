@@ -58,7 +58,8 @@ function watchFiles() {
 		},
 	});
 	gulp.watch("./sass/**/*.scss", css);
-	gulp.watch("./index.html").on("change", browserSync.reload);
+	gulp.watch("../index.html").on("change", browserSync.reload);
+	gulp.watch("../stays.html").on("change", browserSync.reload);
 	gulp.watch("./js/*.js", js);
 }
 const watch = gulp.series(bumpVersion, getJson, watchFiles);
